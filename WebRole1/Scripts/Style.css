@@ -1,0 +1,405 @@
+﻿/*index.cshtml*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.header {
+    background: #000;
+    padding: 5px 25px;
+    height: 36px;
+}
+
+    .header h1 {
+        width: auto;
+        display: inline-block;
+        /*font-size: 18px;*/
+        font-size: 20px;
+        margin: 0;
+        /*color: #337ab7;*/
+        font-family: 'Segoe UI Semibold';
+        color: #59b4d9;
+    }
+
+        .header h1.contact {
+            font-family: 'Segoe UI light';
+            font-size: 13px;
+            color: #FFFFFF;
+        }
+
+            .header h1.contact:hover {
+                /*color: #007926;*/
+            }
+
+        .header h1 span {
+            padding-right: 10px;
+        }
+
+    .header a {
+        display: inline-block;
+        vertical-align: text-bottom;
+    }
+
+.headr {
+    font-size: 16px;
+    color: #337ab7;
+    padding: 0px 25px;
+}
+
+    .headr span.glyphicon-print {
+        padding-right: 10px;
+        display: inline-block;
+    }
+
+    .headr span.glyphicon-chevron-down {
+        font-size: 13px;
+        vertical-align: middle;
+        padding-left: 8px;
+    }
+
+.nav-pills > .active > a,
+.nav-pills > .active > a:hover,
+.nav-pills > li > a:hover {
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 0px;
+    border-bottom-width: 4px;
+    border-bottom-style: solid;
+    border-bottom-color: #000;
+    background-color: white !important;
+    color: #000 !important;
+    /*#23527c*/
+}
+
+
+.nav-pills > li > a {
+    border-radius: 0px;
+}
+
+.bgcoloronhover:hover{
+    background-color:black;
+    cursor:pointer;
+}
+
+#icon {
+
+    width: 23%;
+}
+
+#docdbicon {
+    width: 8%;
+    padding-bottom: 6px;
+    padding-top: 2px;
+}
+
+#moreIcon {
+    width:20px;
+}
+
+#blueGameIcon {
+    padding-left: 5px;
+}
+
+#homeIcon {
+}
+
+.gamescale {
+    padding: 36px;
+    color: #fff;
+    height: 290px;
+    /*background-color: #59b4d9;*/
+}
+
+    .gamescale h2 {
+        font-family: 'Segoe UI Light';
+        font-size: 36px;
+        padding-bottom: 12px;
+    }
+
+    .gamescale p.blazing {
+        font-family: 'Segoe UI Light';
+        font-size: 20px;
+        padding-bottom: 18px;
+    }
+
+    .gamescale p.Nosql {
+        font-family: 'Segoe UI light';
+        font-size: 16px;
+        /*width:40%;*/
+    }
+
+.row-height {
+    display: flex;
+    font-size: 16px !important;
+}
+
+.col-sm-height {
+    display: flex;
+    flex-direction: column;
+}
+
+.gamescale p {
+    width: 60%;
+}
+
+.footer {
+    background: #F5F5F5;
+    text-align: center;
+    padding: 10px;
+    bottom: 0px;
+    margin-top: 0px;
+    width: 100%;
+    position: absolute;
+}
+
+.mrgtp25 {
+    margin-top: 25px !important;
+}
+
+html {
+    height: 100%;
+}
+
+#example {
+    width: 100%;
+    display: table;
+    clear: both;
+    margin-bottom: 35px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+
+.footer a + a {
+    padding-left: 8px;
+}
+
+.provisionedcnt {
+    font-size: 14px;
+    padding: 0 25px;
+    margin: 0;
+}
+
+    .provisionedcnt span {
+        vertical-align: top;
+        font-size: 11px;
+        padding: 3px 0 0 10px;
+    }
+
+#profileCompleteness {
+    width: 100%;
+    padding: 2px 0;
+    margin: 10px;
+}
+
+    #profileCompleteness.k-progressbar {
+        border: 1px solid #333;
+    }
+
+        #profileCompleteness.k-progressbar > .k-reset {
+            height: 94%;
+            margin: 1px;
+        }
+
+.forms {
+    list-style-type: none;
+    padding: 2em 0 0;
+    margin: 0;
+}
+
+    .forms label {
+        display: block;
+        font-size: 12px;
+        line-height: 1em;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 1em;
+    }
+
+    .forms li {
+        margin-bottom: 1.5em;
+    }
+
+.imgadjust {
+    display: block;
+    width: 250px;
+    margin: 0 auto;
+}
+
+    .imgadjust.width150 {
+        width: 150px;
+    }
+
+.nav-pills {
+    border-bottom: 1px solid #ccc;
+}
+
+#ThroughptSliderSlider .slider-handle.round {
+    border-radius: 10%;
+}
+
+.nav-pills li.active a, .nav-pills li a {
+    outline: 0;
+}
+
+.gamecnt {
+    height: 376px;
+    /*background: #23527c;*/
+    /*padding-bottom: 120px;*/
+    /*margin-bottom: 50px;*/
+    /*background-image: url('../Images/world2.jpg');*/
+    background-image: url('../Images/home_banner full_72.png');
+    /*background-image: url('../Images/home_banner full_main.svg');*/
+    background-repeat: no-repeat;
+    background-position: center center;
+    /*background-attachment: fixed;*/
+    background-size: cover;
+    /*background-color: #59b4d9;*/
+}
+
+    .gamecnt ul {
+        position: absolute;
+        /*background: #13223f;*/
+        opacity: 0.8;
+        padding: 10px 30px;
+        width: 100%;
+        /*z-index: 999;*/
+        clear: both;
+    }
+
+        .gamecnt ul li.linehtinherit {
+            line-height: inherit;
+        }
+
+        .gamecnt ul li span {
+            padding: 0 10px 0 0;
+        }
+
+        .gamecnt ul li {
+            list-style-type: none;
+            float: left;
+            /*line-height: 40px;*/
+            text-align: left;
+            width: 150px;
+            background: #4e8498;
+        }
+
+.nobackground {
+    background: none !important;
+}
+
+    .nobackground a:hover {
+        background: transparent;
+    }
+
+.gamecnt li a {
+    color: #FFF;
+    padding: 8px 31px;
+    height: 100%;
+    display: inline-block;
+    outline: 0;
+}
+
+.padding20 {
+    padding: 30px;
+    padding-top: 120px !important;
+}
+
+a {
+    outline: 0;
+}
+
+.gamecnt li a:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a.active {
+    outline: 0;
+}
+
+.gamebtns {
+    position: relative;
+}
+
+    .gamebtns div {
+        position: absolute;
+        opacity: 0.4;
+        /*height: 68px;*/
+        /*background: #59b4d9;*/
+        width: 100%;
+    }
+
+.gamecnt ul li + li {
+    margin-left: 20px;
+}
+
+.paddingpara {
+    padding: 15px;
+}
+
+/*----------------------------------------introduction.cshtml/ RealtimeQuery.cshtml---------------------------------------------------------------------*/
+
+.txtarea {
+    height: 600px;
+    width: 650px;
+    background-color: #E3E5E6;
+}
+
+.txtarea1 {
+    height: 500px;
+    width: 550px;
+    background-color: white;
+}
+
+.col-lg-6 col-sm-6 col-lg-6 > #IntroArea {
+    background-color: red;
+    margin: 50px;
+    padding: 50px;
+}
+
+.container {
+    width: 1600px !important;
+    padding-top: 50px;
+}
+
+#aNext {
+    position: absolute;
+    top: 50px;
+    right: 175px;
+}
+
+#drpdownselect {
+    width: 550px;
+}
+
+.ScenarioGaming {
+    padding-left: 11px;
+    padding-right: 11px;    
+}
+
+@media only screen and (min-width:320px) and (max-width:1700px) {
+    .gamecnt {
+        position: relative;
+        top: -2px;
+    }
+}
+
+@media only screen and (min-width:320px) and (max-width:600px) {
+    .gamecnt {
+        background-position: 50% 0;
+    }
+
+    .gamescale p {
+        width: 100%;
+    }
+}

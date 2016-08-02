@@ -1,0 +1,58 @@
+﻿@{
+    ViewBag.Title = ViewBag.Title;
+    Layout = "~/Views/Shared/_LayoutGaming.cshtml";
+}
+<script src="~/Scripts/bootstrap.min.js"></script>
+<link href="~/Scripts/Style.css" rel="stylesheet" />
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+@*<script src="~/Scripts/JsChart.js"></script>*@
+<script src="~/Scripts/GamingChart.js"></script>
+<link href="~/Content/bootstrap-switch/bootstrap3/bootstrap-switch.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap-switch.js"></script>
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/Chart.js"></script>
+<script src="~/Scripts/jquery.canvasjs.min.js"></script>
+<link href="http://seiyria.com/bootstrap-slider/css/bootstrap-slider.css" rel="stylesheet" />
+<script src="http://seiyria.com/bootstrap-slider/js/bootstrap-slider.js"></script>
+
+
+<div class="container">
+    <div class="wrapper">
+        <input id="ThroughptSlider" data-slider-id='ThroughptSliderSlider' type="text" data-slider-min="10100" data-slider-max="250000" data-slider-step="500" /> <strong>Throughput</strong>
+        <button id="btnThroughputSlider" type="button" class="btn btn-primary" title="Set Throughput">Apply</button>
+    </div>
+
+    <div id="example">
+        <div class="demo-section k-content wide">
+            <div class="col-md-6 col-sm-6 col-lg-6">
+                <canvas id="requestUnitsPerSecondChart" width="600" height="400"></canvas>
+            </div>
+            <div class="col-md-6 col-sm-6 col-lg-6">               
+                <canvas id="totalDocumentsCreatedChart" width="600" height="400"></canvas>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-sm-4 col-lg-4">
+                <blockquote>
+                    <p><label id="RUsInLastSec" /></p>
+                    <small>RUs IN LAST SECOND<cite></cite></small>
+                </blockquote>
+            </div>
+            <div class="col-md-4 col-sm-4 col-lg-4">
+                <blockquote>
+                    <p><label id="writsInLastSec" /></p>
+                    <small>WRITES IN LAST SECOND <cite></cite></small>
+                </blockquote>
+            </div>
+            <div class="col-md-4 col-sm-4 col-lg-4">
+                <blockquote>
+                    <p><label id="RUspermonth" /></p>
+                    <small>RUs / MONTH AT CURRENT RATE <cite></cite></small>
+                </blockquote>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="~/Scripts/script.js"></script>

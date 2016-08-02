@@ -1,0 +1,54 @@
+﻿@{
+    ViewBag.Title = "RealTimeQuery";
+    Layout = "~/Views/Shared/_LayoutGaming.cshtml";
+}
+
+<script src="~/Scripts/bootstrap.min.js"></script>
+<link href="~/Scripts/Style.css" rel="stylesheet" />
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="~/Scripts/script.js"></script>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Introduction</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-sm-3 col-xs-6">
+                <h4>Select Sample Query</h4>
+                <div class="row">
+                    <select id="drpdownselect" class="btn btn-default">
+                        <option>Select</option>
+                        <option>Filter</option>
+                        <option>Orderby</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <br />
+                    <textarea class="txtarea1"></textarea><br /><br />
+                    <button id="btnRunQuery" class="btn btn-primary btn-sm">Run It</button>
+                    <button class="btn btn-primary btn-sm">
+                        <span class="glyphicon glyphicon-refresh" id="refshBtn"></span>
+                    </button>
+                </div>
+
+            </div>
+            <div class="col-lg-6 col-sm-3 col-xs-6">
+                <div>
+                    <span style="text-align:left;">
+                        <a>JSON</a>@*|<a>MAP</a>*@
+                    </span>
+                </div>
+                <div style="display:inline-block">
+                    <textarea class="txtarea" id="resultJson"></textarea>
+                    <a id="aNext"><span id="spanNxt" class="glyphicon glyphicon-arrow-right"></span></a>
+                    <span id="spanContinuationToken" style="display:none;"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

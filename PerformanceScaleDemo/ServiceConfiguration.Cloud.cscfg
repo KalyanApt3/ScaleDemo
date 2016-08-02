@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="PerformanceScaleDemo" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="4" osVersion="*" schemaVersion="2015-04.2.6">
+    <Role name="WebRole1">
+        <Instances count="1" />
+        <ConfigurationSettings>
+            <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=artrejo;AccountKey=/DXC/ma+gRXwak3urjD07hH0jnXQp5jvNONAGgi729zLUpPzj/fLno8RhTolNPAHll5OnuToZuqxyCfWwyYNqg==" />
+            <Setting name="APPINSIGHTS_INSTRUMENTATIONKEY" value="ffdf1498-ef69-4fbc-98f8-85fac3c1d7e5" />
+
+          
+            <Setting name="DocumentDBEndpoint" value="" />
+            <Setting name="DocumentDBKey" value="" />
+            <Setting name="DatabaseName" value="demo" />
+            <Setting name="CollectionName" value="data" />
+            <Setting name="MetricCollectionName" value="metrics" />
+            <Setting name="DocumentTemplateFile" value="Player.json" />
+        </ConfigurationSettings>
+    </Role>
+    <Role name="WorkerRole1">
+        <Instances count="1" />
+        <ConfigurationSettings>
+            <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=artrejo;AccountKey=/DXC/ma+gRXwak3urjD07hH0jnXQp5jvNONAGgi729zLUpPzj/fLno8RhTolNPAHll5OnuToZuqxyCfWwyYNqg==" />
+            <Setting name="APPINSIGHTS_INSTRUMENTATIONKEY" value="ffdf1498-ef69-4fbc-98f8-85fac3c1d7e5" />
+
+            <Setting name="DocumentDBEndpoint" value="" />
+            <Setting name="DocumentDBKey" value="" />
+            <Setting name="DatabaseName" value="demo" />
+            <Setting name="CollectionName" value="data" />
+            <Setting name="CollectionPartitionKey" value="/foo" />
+            <Setting name="MetricCollectionName" value="metrics" />
+            <Setting name="CollectionThroughput" value="10000" />
+            <Setting name="ShouldDeleteAndRecreateDatabaseAndCollection" value="false" />
+            <Setting name="DegreeOfParallelism" value="5" />
+            <Setting name="NumberOfDocumentsToInsert" value="1000" />
+            <Setting name="DocumentTemplateFile" value="Player.json" />
+        </ConfigurationSettings>
+    </Role>
+</ServiceConfiguration>

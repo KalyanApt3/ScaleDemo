@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "Introduction";
+    Layout = "~/Views/Shared/_LayoutGaming.cshtml";
+}
+
+<script src="~/Scripts/bootstrap.min.js"></script>
+<link href="~/Scripts/Style.css" rel="stylesheet" />
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+<link href="http://seiyria.com/bootstrap-slider/css/bootstrap-slider.css" rel="stylesheet" />
+<link href="http://seiyria.com/bootstrap-slider/dependencies/css/bootstrap.min.css" rel="stylesheet" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="http://seiyria.com/bootstrap-slider/js/bootstrap-slider.js"></script>
+@Scripts.Render("~/bundles/GamingScript");
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Introduction</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-sm-6 col-lg-6">
+                <div id="IntroArea">
+                    <h4><strong>Powering Your gaming Applications</strong></h4>
+                    <p>
+                        Azure DocumentDB is a <a href="https://azure.microsoft.com/en-us/documentation/articles/fundamentals-data-management-nosql-chappell/" target="_blank">NoSql database</a>service that delivers consistent, millisecond <br />latency at any scale.
+                        With DocumentDB, you can create responsive mobile, <br />console, and desktop games with players all around the world.<br /><br />
+                        Try this demo with sample JSON to the right that shows in-game state of a player including high scores,social handles and chat mesages.
+                    </p>
+                </div><br /><br />
+             </div>
+                
+            <div class="col-lg-6 col-sm-6 col-lg-6">
+                <h5>Sample JSON Document</h5>
+
+                @{
+
+                    
+                    string filename = "~/Player.json";
+                    string path = Server.MapPath(filename);
+                    string result = File.ReadAllText(path);
+
+                    <textarea id="txtAreaFileContent" class="txtarea" readonly>@result</textarea>
+                }
+            </div>
+
+        </div>
+    </div>
+    <script src="~/Scripts/script.js"></script>
+</body>
+</html>

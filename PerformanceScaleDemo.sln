@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "PerformanceScaleDemo", "PerformanceScaleDemo\PerformanceScaleDemo.ccproj", "{26512AEA-D8AD-4F99-8475-3E7748BC7CAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebRole1", "WebRole1\WebRole1.csproj", "{EEA7BD15-9D57-4FD1-99A0-971A424764F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkerRole1", "WorkerRole1\WorkerRole1.csproj", "{A30345D3-BB36-4859-A82E-71FE1E5BC291}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{26512AEA-D8AD-4F99-8475-3E7748BC7CAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26512AEA-D8AD-4F99-8475-3E7748BC7CAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26512AEA-D8AD-4F99-8475-3E7748BC7CAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26512AEA-D8AD-4F99-8475-3E7748BC7CAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEA7BD15-9D57-4FD1-99A0-971A424764F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEA7BD15-9D57-4FD1-99A0-971A424764F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEA7BD15-9D57-4FD1-99A0-971A424764F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEA7BD15-9D57-4FD1-99A0-971A424764F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A30345D3-BB36-4859-A82E-71FE1E5BC291}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A30345D3-BB36-4859-A82E-71FE1E5BC291}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A30345D3-BB36-4859-A82E-71FE1E5BC291}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A30345D3-BB36-4859-A82E-71FE1E5BC291}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

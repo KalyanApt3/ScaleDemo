@@ -1,0 +1,16 @@
+﻿{
+  "id": "latestMININT-E0EMAFN.redmond.corp.microsoft.com2284",
+  "type": "latest",
+  "totalDocumentsCreated": 10000,
+  "documentsCreatedPerSecond": 203,
+  "requestUnitsPerSecond": 2132,
+  "requestUnitsPerMonth": 5526144000,
+  "documentsCreatedInLastSecond": 68,
+  "requestUnitsInLastSecond": 901,
+  "requestUnitsPerMonthBasedOnLastSecond": 2335204596,
+  "_rid": "J20pAMW2pgwNAAAAAAAAAA==",
+  "_self": "dbs/J20pAA==/colls/J20pAMW2pgw=/docs/J20pAMW2pgwNAAAAAAAAAA==/",
+  "_etag": "00001400-0000-0000-0000-576c702f0000",
+  "_attachments": "attachments/",
+  "_ts": 1466724398
+}
