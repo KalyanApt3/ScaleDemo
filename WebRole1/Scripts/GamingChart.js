@@ -127,7 +127,7 @@ var downloadData = function () {
                 requestUnitsPerSecond: 1,
                 requestUnitsPerMonth: 1,
                 requestUnitsInLastSecond: 1
-               
+
             }
 
             var tempDoc;
@@ -213,85 +213,82 @@ var JschartTitles = ["TotalDocumentsCreated", "RequestUnitsPerSecond"]
 var JstotalStats = { totalDocumentsCreated: 1, requestUnitsPerSecond: 1 }
 var JsdocdbProperties = ["totalDocumentsCreated", "requestUnitsPerSecond"]
 
-var RequestUnitsPerSecondData = []; var RequestUnitsPerSecondLblData = []; var TotalDocsCreatedData = []; var TotalDocsCreateLbldData = [];
+//var RequestUnitsPerSecondData = []; var RequestUnitsPerSecondLblData = [];
+//var TotalDocsCreatedData = []; var TotalDocsCreateLbldData = [];
 
 var JschartOptions = {
     TotalDocumentsCreated: {
         id: "totalDocumentsCreatedChart",
         title: "Total Documents Created",
-        docdbProperty: "totalDocumentsCreated"
+        docdbProperty: "totalDocumentsCreated",
+        TotalDocsCreatedData: {
+            "cols": [
+            { "type": "string" }, { "type": "number" }
+            ],
+            "rows": [],
+        }
     },
     RequestUnitsPerSecond: {
         id: "requestUnitsPerSecondChart",
         title: "Request Units per second",
-        docdbProperty: "requestUnitsInLastSecond"
+        docdbProperty: "requestUnitsInLastSecond",
+        RequestUnitsPerSecondData: {
+            "cols": [
+            { "type": "string" }, { "type": "number" }
+            ],
+            "rows": [],
+        }
     },
 };
 
 function StartGraphProcess() {
-    JschartTitles.forEach(function (element) {
-        createJsChart(JschartOptions[element].id);
-    });
+    //JschartTitles.forEach(function (element) {
+    //    createJsChart(JschartOptions[element]);
+    //});
 
     var interval = setInterval(ShowMetrixGraph, 2000);
 }
 
-function createJsChart(graphid) {
-    var options = {
-        options: {
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero: true
-                    }
-                }],
-                scaleShowLabels: false
-            }
-        }
-    };
+google.load("visualization", "1", { packages: ["corechart"] });
+google.setOnLoadCallback(load_page_data);
 
-    var data = {
-        labels: (graphid == 'requestUnitsPerSecondChart' ? RequestUnitsPerSecondLblData : TotalDocsCreateLbldData),
-        datasets: [
-            {
-                label: (graphid == 'requestUnitsPerSecondChart' ? "Request Units per second" : "Total Documents Created"),
-                fillColor: "rgba(220,220,220,0.2)",
-                lineTension: 0.1,
-                backgroundColor: "rgba(75,192,192,0.4)",
-                borderColor: "rgba(75,192,192,1)",
-                borderCapStyle: 'butt',
-                borderDash: [],
-                borderDashOffset: 0.0,
-                borderJoinStyle: 'miter',
-                pointBorderColor: "rgba(75,192,192,1)",
-                pointBackgroundColor: "#fff",
-                pointBorderWidth: 1,
-                pointHoverRadius: 5,
-                pointHoverBackgroundColor: "rgba(75,192,192,1)",
-                pointHoverBorderColor: "rgba(220,220,220,1)",
-                pointHoverBorderWidth: 2,
-                pointRadius: 1,
-                pointHitRadius: 10,
-                data: (graphid == 'requestUnitsPerSecondChart' ? RequestUnitsPerSecondData : TotalDocsCreatedData),
-                spanGaps: false
-            }
-        ]
-    };
 
-    var chartid = document.getElementById(graphid).getContext('2d');
+//var chart_data = {
+//    "cols": [
+//        { "type": "string" }, { "type": "number" }
+//    ],
+//    "rows": [{ "c": [{ "v": "" }, { "v": 10 }] },
+//           { "c": [{ "v": "" }, { "v": 20 }] },
+//           { "c": [{ "v": "" }, { "v": 15 }] },
+//           { "c": [{ "v": "" }, { "v": 30 }] }
+//    ]
+//};
 
-    var myLineChart = new Chart(chartid, {
-        type: 'line',
-        data: data,
-        options: options
+function load_page_data() {
+    JschartTitles.forEach(function (element) {
+        drawChart(JschartOptions[element]);
     });
 }
 
-$(document).ready(function () {
+function load_page_data1(chart_data) {
     JschartTitles.forEach(function (element) {
-        createJsChart(JschartOptions[element].id);
+        drawChart(JschartOptions[element]);
     });
-});
+}
+
+function drawChart(graphdata) {
+    var chart1_main_title = (graphdata.id == 'requestUnitsPerSecondChart' ? "Request Units Per Second" : "Total Docs Created");
+    var chart_data = (graphdata.id == 'requestUnitsPerSecondChart' ? graphdata.RequestUnitsPerSecondData : graphdata.TotalDocsCreatedData);
+    var chart1_data = new google.visualization.DataTable(chart_data);
+    var chart1_options = {
+        title: chart1_main_title,
+        height: 500,
+        width: 800
+    };
+
+    var chart1_chart = new google.visualization.AreaChart(document.getElementById(graphdata.id));
+    chart1_chart.draw(chart1_data, chart1_options);
+}
 
 function ShowMetrixGraph() {
     var tempDoc;
@@ -319,11 +316,20 @@ function ShowMetrixGraph() {
             totalStats["requestUnitsPerSecond"] = data.items[0].requestUnitsPerSecond;
             totalStats["requestUnitsInLastSecond"] = data.items[0].requestUnitsInLastSecond;
 
-            RequestUnitsPerSecondData.push(totalStats["requestUnitsInLastSecond"]); RequestUnitsPerSecondLblData.push("");
-            TotalDocsCreatedData.push(totalStats["totalDocumentsCreated"]); TotalDocsCreateLbldData.push("");
+            //RequestUnitsPerSecondData.push(totalStats["requestUnitsInLastSecond"]); RequestUnitsPerSecondLblData.push("");
+            //TotalDocsCreatedData.push(totalStats["totalDocumentsCreated"]); TotalDocsCreateLbldData.push("");
+
+            JschartOptions["RequestUnitsPerSecond"].RequestUnitsPerSecondData.rows.push({ "c": [{ "v": "" }, { "v": totalStats["requestUnitsInLastSecond"] }] });
+            //JschartOptions["RequestUnitsPerSecond"].RequestUnitsPerSecondLblData.rows.push("");
+
+            JschartOptions["TotalDocumentsCreated"].TotalDocsCreatedData.rows.push({ "c": [{ "v": "" }, { "v": totalStats["totalDocumentsCreated"] }] });
+            //JschartOptions["TotalDocumentsCreated"].TotalDocsCreateLbldData.push("");
+
+            // alert(JschartOptions["RequestUnitsPerSecond"].RequestUnitsPerSecondData);
 
             JschartTitles.forEach(function (element) {
-                createJsChart(JschartOptions[element].id);
+                // alert(JschartOptions[element]);
+                load_page_data1(JschartOptions[element]);
             });
         },
         error: function (xhr, status, error) {
