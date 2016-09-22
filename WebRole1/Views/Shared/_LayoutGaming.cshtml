@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>@ViewBag.Title - My Kendo UI MVC Application</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
     <!--This CSS entry was added by the Telerik VS Extensions for compatibility reasons-->
     <link href="@Url.Content("~/Content/kendo.compatibility.css")" rel="stylesheet" type="text/css" />
@@ -16,21 +17,34 @@
     <script src="https://kendo.cdn.telerik.com/2016.2.607/js/kendo.all.min.js"></script>
     <script src="https://kendo.cdn.telerik.com/2016.2.607/js/kendo.aspnetmvc.min.js"></script>
     <script src="@Url.Content("~/Scripts/kendo.modernizr.custom.js")"></script>
+    <script type="text/javascript" src="https://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0&s=1&mkt=en-gb"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script src="~/Scripts/loader.js"></script>
-    @*<script src="~/Scripts/JsChart.js"></script>*@
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <link href="~/Scripts/Style.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <script src="~/Scripts/script.js"></script>
 </head>
 <body>
     <header>
         @Html.Partial("_LayoutHeader")
         <div class="container">
             <div class="row">
-                <h2 class="headr">
-                    <a class="nav-link" type="button" href="#" onclick="location.href = '@Url.Action("HomeDocDB", "Home")'"><span><img src="~/Images/home.png" style="width: 4%;" /></span></a>
-                    <strong class="ScenarioGaming">| Scenario:</strong><span>@*<img src="~/Images/game_blue.svg" id="blueGameIcon" />*@</span>Gaming<span class="glyphicon glyphicon-chevron-down"></span>
-                </h2>
+                <div class="headr" style="font-size:large;padding-bottom:10px;">
+                    <a class="nav-link" type="button" href="#" onclick="location.href = '@Url.Action("HomeDocDB", "Home")'">
+                        <span>
+                            <img src="~/Images/home.png" style="width: 2%;" />
+                        </span>
+                        @*<span style="height:20px;color:black; background-color:#000"> |</span>*@
+                    </a>                   
+                    <p style="display:inline;vertical-align:middle;">
+                        <span class="ScenarioGaming">|  Scenario:</span>
+                        <span><img src="~/Images/joystick.png" id="blueGameIcon" /></span>
+                        Gaming<span class="glyphicon glyphicon-chevron-down"></span>
+                    </p>
+                </div>
+                @*<h2 style="width:1px;height:20px;background-color:#000"> Scenario:</h2>*@
             </div>
-
             <nav class="navbar navbar-light bg-faded">
                 <ul class="nav nav-pills">
                     <li class="nav-item @(ViewBag.Title == "Introduction" ? "active" : "")">

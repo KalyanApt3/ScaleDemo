@@ -5,10 +5,8 @@
         <ConfigurationSettings>
             <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=artrejo;AccountKey=/DXC/ma+gRXwak3urjD07hH0jnXQp5jvNONAGgi729zLUpPzj/fLno8RhTolNPAHll5OnuToZuqxyCfWwyYNqg==" />
             <Setting name="APPINSIGHTS_INSTRUMENTATIONKEY" value="ffdf1498-ef69-4fbc-98f8-85fac3c1d7e5" />
-
-          
-            <Setting name="DocumentDBEndpoint" value="Key" />
-            <Setting name="DocumentDBKey" value="Key" />
+            <<Setting name="DocumentDBEndpoint" value="URL" />
+            <Setting name="DocumentDBKey" value="Primary Key" />
             <Setting name="DatabaseName" value="demo" />
             <Setting name="CollectionName" value="data" />
             <Setting name="MetricCollectionName" value="metrics" />
@@ -20,9 +18,8 @@
         <ConfigurationSettings>
             <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=artrejo;AccountKey=/DXC/ma+gRXwak3urjD07hH0jnXQp5jvNONAGgi729zLUpPzj/fLno8RhTolNPAHll5OnuToZuqxyCfWwyYNqg==" />
             <Setting name="APPINSIGHTS_INSTRUMENTATIONKEY" value="ffdf1498-ef69-4fbc-98f8-85fac3c1d7e5" />
-
-            <Setting name="DocumentDBEndpoint" value="Key" />
-            <Setting name="DocumentDBKey" value="Key" />
+            <Setting name="DocumentDBEndpoint" value="URL" />
+            <Setting name="DocumentDBKey" value="Primary Key" />
             <Setting name="DatabaseName" value="demo" />
             <Setting name="CollectionName" value="data" />
             <Setting name="CollectionPartitionKey" value="/foo" />

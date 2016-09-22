@@ -31,6 +31,7 @@ body {
             font-family: 'Segoe UI light';
             font-size: 13px;
             color: #FFFFFF;
+            padding-right: 12px;
         }
 
             .header h1.contact:hover {
@@ -82,14 +83,14 @@ body {
     border-radius: 0px;
 }
 
-.bgcoloronhover:hover{
-    background-color:black;
-    cursor:pointer;
+.bgcoloronhover:hover {
+    background-color: black;
+    cursor: pointer;
 }
 
-#icon {
-
-    width: 23%;
+.icon {
+    width: 25px;
+    height: 25px;
 }
 
 #docdbicon {
@@ -99,11 +100,12 @@ body {
 }
 
 #moreIcon {
-    width:20px;
+    width: 20px;
 }
 
 #blueGameIcon {
-    padding-left: 5px;
+    padding: 5px;
+    width: 3%
 }
 
 #homeIcon {
@@ -257,40 +259,69 @@ footer {
     /*padding-bottom: 120px;*/
     /*margin-bottom: 50px;*/
     /*background-image: url('../Images/world2.jpg');*/
-    background-image: url('../Images/home_banner full_72.png');
+    /* background-image: url('Images/home_banner full_72.png');
     /*background-image: url('../Images/home_banner full_main.svg');*/
     background-repeat: no-repeat;
     background-position: center center;
     /*background-attachment: fixed;*/
     background-size: cover;
-    /*background-color: #59b4d9;*/
+    background-color: #59b4d9;
 }
 
-    .gamecnt ul {
-        position: absolute;
-        /*background: #13223f;*/
-        opacity: 0.8;
-        padding: 10px 30px;
-        width: 100%;
-        /*z-index: 999;*/
-        clear: both;
+.img-adjust {
+    position: absolute;
+    z-index: 9999;
+    top: 9px;
+    right: 200px;
+    display: inline-block;
+    width: 37%;
+    height: auto;
+}
+
+.header {
+    position: relative;
+    z-index: 99999;
+}
+
+#divHeaderMore {
+    z-index: 99999;
+}
+
+.gamecnt ul {
+    position: relative;
+    padding: 10px 30px;
+    width: 100%;
+    z-index: 999;
+    clear: both;
+    height: 79px;
+}
+
+    .gamecnt ul li.linehtinherit {
+        line-height: inherit;
     }
 
-        .gamecnt ul li.linehtinherit {
-            line-height: inherit;
+    .gamecnt ul li span {
+        padding: 0 10px 0 0;
+        position: absolute;
+        top: 25%;
+    }
+
+    .gamecnt ul li {
+        list-style-type: none;
+        float: left;
+        /*line-height: 40px;*/
+        text-align: left;
+        width: 175px;
+        background: #4e8498;
+    }
+
+        .gamecnt ul li:last-child span + span {
+            top: 18%;
         }
 
-        .gamecnt ul li span {
-            padding: 0 10px 0 0;
-        }
-
-        .gamecnt ul li {
-            list-style-type: none;
-            float: left;
-            /*line-height: 40px;*/
-            text-align: left;
-            width: 150px;
-            background: #4e8498;
+        .gamecnt ul li span + span {
+            left: 60px;
+            top: 30%;
         }
 
 .nobackground {
@@ -303,15 +334,16 @@ footer {
 
 .gamecnt li a {
     color: #FFF;
-    padding: 8px 31px;
+    padding: 8px 0px 8px 20px;
     height: 100%;
     display: inline-block;
     outline: 0;
+    position: relative;
 }
 
 .padding20 {
     padding: 30px;
-    padding-top: 120px !important;
+    padding-top: 100px !important;
 }
 
 a {
@@ -333,10 +365,11 @@ a.active {
 
     .gamebtns div {
         position: absolute;
-        opacity: 0.4;
-        /*height: 68px;*/
-        /*background: #59b4d9;*/
+        opacity: 0.2;
+        height: 86px;
+        background: #000;
         width: 100%;
+        border: 1px solid #59b4d9;
     }
 
 .gamecnt ul li + li {
@@ -346,6 +379,13 @@ a.active {
 .paddingpara {
     padding: 15px;
 }
+
+.responcive {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 10%;
+}
+
 
 /*----------------------------------------introduction.cshtml/ RealtimeQuery.cshtml---------------------------------------------------------------------*/
 
@@ -361,11 +401,11 @@ a.active {
     background-color: white;
 }
 
-.col-lg-6 col-sm-6 col-lg-6 > #IntroArea {
+/*.col-lg-6 col-sm-6 col-lg-6 > #IntroArea {
     background-color: red;
     margin: 50px;
     padding: 50px;
-}
+}*/
 
 .container {
     width: 1600px !important;
@@ -384,7 +424,8 @@ a.active {
 
 .ScenarioGaming {
     padding-left: 11px;
-    padding-right: 11px;    
+    padding-right: 11px;
+    color:black;
 }
 
 @media only screen and (min-width:320px) and (max-width:1700px) {
@@ -394,9 +435,87 @@ a.active {
     }
 }
 
+@media only screen and (min-width:320px) and (max-width:767px) {
+    .img-adjust {
+        position: absolute;
+        z-index: 9999;
+        top: 10px;
+        left: 0px;
+        display: inline-block;
+        width: 90%;
+        height: 87%;
+        max-height: 299px;
+        margin: 0 auto;
+    }
+
+    .header {
+        z-index: 99999;
+    }
+
+    #divHeaderMore {
+        z-index: 99999;
+    }
+
+    .img-adjust img {
+        height: 100%;
+    }
+
+    .gamecnt ul li span + span {
+        display: none;
+    }
+
+    .gamecnt ul li span {
+        position: static;
+    }
+
+    .gamecnt li:first-child a {
+        width: auto;
+        text-align: left;
+        padding-top: 8px;
+    }
+
+    .gamecnt li a {
+        color: #FFF;
+        padding: 0px;
+        height: 100%;
+        display: inline-block;
+        outline: 0;
+        position: relative;
+        text-align: center;
+        vertical-align: bottom;
+        width: 25px;
+        margin: 0 auto;
+        padding-top: 17px;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) {
+    .img-adjust {
+        position: absolute;
+        z-index: 9999;
+        top: 10px;
+        right: 2px;
+        display: inline-block;
+        width: 55%;
+        height: auto;
+    }
+
+    .header {
+        z-index: 99999;
+    }
+
+    #divHeaderMore {
+        z-index: 99999;
+    }
+}
+
 @media only screen and (min-width:320px) and (max-width:600px) {
     .gamecnt {
         background-position: 50% 0;
+    }
+
+    .img-adjust {
+        display: none;
     }
 
     .gamescale p {

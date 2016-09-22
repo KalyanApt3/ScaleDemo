@@ -372,6 +372,7 @@
     <Content Include="Images\home_banner full_main.svg" />
     <Content Include="Images\Image1.png" />
     <Content Include="Images\IoT.SVG" />
+    <Content Include="Images\joystick.png" />
     <Content Include="Images\more.svg" />
     <Content Include="Images\performance.png" />
     <Content Include="Scripts\bootstrap-slider.js" />

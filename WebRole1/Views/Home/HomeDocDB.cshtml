@@ -5,6 +5,7 @@
 <script src="~/Scripts/bootstrap.min.js"></script>
 <link href="~/Scripts/Style.css" rel="stylesheet" />
 <link href="~/Content/bootstrap.css" rel="stylesheet" />
+<script src="~/Scripts/script.js"></script>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -18,21 +19,24 @@
             <p class="blazing">Blazing fast, planet-scale NoSQL</p>
             <p class="Nosql">NoSQL Service for highly available, globally distribed apps, take full advantage of SQL and JavaScript without the hassles of other on-premises or  virtual machine-based cloud options.</p>
         </div>
+
         <div class="gamebtns">
             <div></div>
             <ul class="row-height">
-                <li class="col-sm-height nobackground"><a>Choose scenario</a></li>
-                <li class="col-sm-height"><a href="#" onclick="location.href = '@Url.Action("Introduction", "Home")'"><span><img src="~/Images/game.svg" id="icon" /></span>Gaming</a></li>
-                <li class="col-sm-height"><a><span><img src="~/Images/IoT.SVG" id="icon" /></span>Iot</a></li>
-                <li class="linehtinherit col-sm-height"><a><span><img src="~/Images/Document mgt.svg" id="icon" /></span>content management</a></li>
+                <li class="col-sm-height nobackground"><a><span>Choose scenario</span></a></li>
+                <li class="col-sm-height" data-toggle="tooltip" title="Gaming"><a href="#" onclick="location.href = '@Url.Action("Introduction", "Home")'"><span><img src="Images/game.svg" class="icon" /></span><span>Gaming</span></a></li>
+                <li class="col-sm-height" data-toggle="tooltip" title="Iot"><a><span><img src="Images/IoT.SVG" class="icon" /></span><span>Iot</span></a></li>
+                <li class="linehtinherit col-sm-height" data-toggle="tooltip" title="Content Management"><a><span><img src="Images/Document mgt.svg" class="icon" /></span><span>content management</span></a></li>
             </ul>
         </div>
+        <div class="img-adjust">
+            <img src="Images/demo_banner image.svg">
+        </div>
     </div>
-
     <div class="row padding20">
         <div class="col-lg-4 col-sm-4 col-lg-4">
-            <h5><b>Elastic scale</b></h5>
-            <img src="~/Images/elastic-scale.png" class="imgadjust" />
+            <h3>Elastic scale</h3>
+            <img src="Images/elastic-scale.png" class="imgadjust" />
             <p class="paddingpara">
                 Document DB can scale elastically and independently in terms of storage and throughput.
                 Your data can span multiple servers,clusters or geographic regions to serve from hundreds to
@@ -40,8 +44,8 @@
             </p>
         </div>
         <div class="col-lg-4 col-sm-4 col-lg-4">
-            <h5><strong>Blazing Fast Performance</strong></h5>
-            <img src="~/Images/performance.png" class="imgadjust width150" />
+            <h3>Blazing Fast Performance</h3>
+            <img src="Images/performance.png" class="imgadjust width150" />
             <p class="paddingpara">
                 DocumentDB's SSD backed, write optimized database engine is capable of ingesting
                 sustained volumes of documents while synchonously indexing them for queries.
@@ -49,8 +53,8 @@
             </p>
         </div>
         <div class="col-lg-4 col-sm-4 col-lg-4">
-            <h5><strong>Sql and JavScript Queries without Schema</strong></h5>
-            <img src="~/Images/agile.png" class="imgadjust" />
+            <h3>Sql and JavScript Queries without Schema</h3>
+            <img src="Images/agile.png" class="imgadjust" />
             <p class="paddingpara">
                 Document DB is completlely schema agnostic and purpose-built for JSON.
                 Iterate your globally distribued app quickly and use familiar SQL and JavaScript,
@@ -58,7 +62,6 @@
             </p>
         </div>
     </div>
-
-
 </body>
 </html>
+
