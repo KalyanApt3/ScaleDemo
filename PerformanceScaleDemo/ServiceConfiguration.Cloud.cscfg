@@ -1,47 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ServiceConfiguration serviceName="PerformanceScaleDemo" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="4" osVersion="*" schemaVersion="2015-04.2.6">
-  <Role name="WebRole1">
-    <Instances count="1" />
-    <ConfigurationSettings>
-      <Setting name="APPINSIGHTS_INSTRUMENTATIONKEY" value="ffdf1498-ef69-4fbc-98f8-85fac3c1d7e5" />
-      <Setting name="DocumentDBEndpoint" value="URL" />
-      <Setting name="DocumentDBKey" value="Primary Key" />
-      <Setting name="DatabaseName" value="demo" />
-      <Setting name="CollectionName" value="data" />
-      <Setting name="MetricCollectionName" value="metrics" />
-      <Setting name="DocumentTemplateFile" value="Player.json" />
-      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
-      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="docdbuser" />
-      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEBewLhtW6t6hSOXUN5Bvs5QwDQYJKoZIhvcNAQEBBQAEggEArwEcQlW5Yz63NLP2PHa3jUief4gC5H3faVhAxgiseFNaoPa2xnK4x1haRVXrwumqJa8bEyjhS9iVer0qk2ZT67FRsbSlbkX42xszfimz/it3+j5RYqpgg3gbA1+gWeY2iy3fjnfscmJgFb6cPeWxJyfIYV2cx1egp53PKHCsdptFus0MiodwT2uvyPVcR5+A7H608qr9PCUh/m+U+gQJMO+zHV+Pp85qE6+DA6coYkKpYD+kZYabX6Wfm01msLOgU8bw4SmEl+ghh3K/tUnmXKh+jEOLW4XK+hL3uG6ZQKEZUaDc/KAv7VCgA4UZL0dxrQpK0pwRX24D4uiQpv1dnDAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECEf2vJQcF2uNgBCrmaNazR8KQLx+AT0njhyH" />
-      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2017-07-27T23:59:59.0000000-07:00" />
-    </ConfigurationSettings>
-    <Certificates>
-      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="A8997C0C3843B9B5CDB70086D7DC13391880703E" thumbprintAlgorithm="sha1" />
-    </Certificates>
-  </Role>
-  <Role name="WorkerRole1">
-    <Instances count="1" />
-    <ConfigurationSettings>
-      <Setting name="DocumentDBEndpoint" value="URL" />
-      <Setting name="DocumentDBKey" value="Primary Key" />
-      <Setting name="DatabaseName" value="demo" />
-      <Setting name="CollectionName" value="data" />
-      <Setting name="MetricCollectionName" value="metrics" />
-      <Setting name="CollectionPartitionKey" value="/foo" />
-      <Setting name="DocumentTemplateFile" value="Player.json" />
-      <Setting name="MetricsPublishingRateInMs" value="200" />
-      <Setting name="DegreeOfParallelism" value="75" />
-      <Setting name="DefaultConnectionLimit" value="7500" />
-      <Setting name="minWorkerThreads" value="75" />
-      <Setting name="minCompletionPortThreads" value="75" />
-      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
-      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="docdbuser" />
-      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEBewLhtW6t6hSOXUN5Bvs5QwDQYJKoZIhvcNAQEBBQAEggEArwEcQlW5Yz63NLP2PHa3jUief4gC5H3faVhAxgiseFNaoPa2xnK4x1haRVXrwumqJa8bEyjhS9iVer0qk2ZT67FRsbSlbkX42xszfimz/it3+j5RYqpgg3gbA1+gWeY2iy3fjnfscmJgFb6cPeWxJyfIYV2cx1egp53PKHCsdptFus0MiodwT2uvyPVcR5+A7H608qr9PCUh/m+U+gQJMO+zHV+Pp85qE6+DA6coYkKpYD+kZYabX6Wfm01msLOgU8bw4SmEl+ghh3K/tUnmXKh+jEOLW4XK+hL3uG6ZQKEZUaDc/KAv7VCgA4UZL0dxrQpK0pwRX24D4uiQpv1dnDAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECEf2vJQcF2uNgBCrmaNazR8KQLx+AT0njhyH" />
-      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2017-07-27T23:59:59.0000000-07:00" />
-      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
-    </ConfigurationSettings>
-    <Certificates>
-      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="A8997C0C3843B9B5CDB70086D7DC13391880703E" thumbprintAlgorithm="sha1" />
-    </Certificates>
-  </Role>
+    <Role name="WebRole1">
+        <Instances count="1" />
+        <ConfigurationSettings>
+            <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=artrejo;AccountKey=/DXC/ma+gRXwak3urjD07hH0jnXQp5jvNONAGgi729zLUpPzj/fLno8RhTolNPAHll5OnuToZuqxyCfWwyYNqg==" />
+            <Setting name="APPINSIGHTS_INSTRUMENTATIONKEY" value="ffdf1498-ef69-4fbc-98f8-85fac3c1d7e5" />
+            <<Setting name="DocumentDBEndpoint" value="URL" />
+            <Setting name="DocumentDBKey" value="Primary Key" />
+            <Setting name="DatabaseName" value="demo" />
+            <Setting name="CollectionName" value="data" />
+            <Setting name="MetricCollectionName" value="metrics" />
+            <Setting name="DocumentTemplateFile" value="Player.json"/>
+        </ConfigurationSettings>
+    </Role>
+    <Role name="WorkerRole1">
+        <Instances count="1" />
+        <ConfigurationSettings>
+            <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=artrejo;AccountKey=/DXC/ma+gRXwak3urjD07hH0jnXQp5jvNONAGgi729zLUpPzj/fLno8RhTolNPAHll5OnuToZuqxyCfWwyYNqg==" />
+            <Setting name="APPINSIGHTS_INSTRUMENTATIONKEY" value="ffdf1498-ef69-4fbc-98f8-85fac3c1d7e5" />
+            <Setting name="DocumentDBEndpoint" value="URL" />
+            <Setting name="DocumentDBKey" value="Primary Key" />
+            <Setting name="DatabaseName" value="demo" />
+            <Setting name="CollectionName" value="data" />
+            <Setting name="CollectionPartitionKey" value="/foo" />
+            <Setting name="MetricCollectionName" value="metrics" />
+            <Setting name="CollectionThroughput" value="10000" />
+            <Setting name="ShouldDeleteAndRecreateDatabaseAndCollection" value="false" />
+            <Setting name="DegreeOfParallelism" value="5" />
+            <Setting name="NumberOfDocumentsToInsert" value="1000" />
+            <Setting name="DocumentTemplateFile" value="Player.json"/>
+        </ConfigurationSettings>
+    </Role>
 </ServiceConfiguration>
